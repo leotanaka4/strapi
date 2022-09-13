@@ -74,6 +74,12 @@
     "birthDate": {
       "type": "date",
       "required": true
+    },
+    "disciplinas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::disciplina.disciplina",
+      "inversedBy": "users"
     }
   }
 }

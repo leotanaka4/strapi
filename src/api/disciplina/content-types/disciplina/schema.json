@@ -4,7 +4,8 @@
   "info": {
     "singularName": "disciplina",
     "pluralName": "disciplinas",
-    "displayName": "Disciplina"
+    "displayName": "Disciplina",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,6 +22,17 @@
     },
     "Codigo": {
       "type": "string"
+    },
+    "sala": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sala.sala"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "disciplinas"
     }
   }
 }
